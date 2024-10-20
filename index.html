@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Join Notification</title>
+    <title>Poly.rocks</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
         body {
@@ -55,32 +56,9 @@
     </style>
 </head>
 <body>
-    <form id="joinForm">
-        <input type="text" id="username" placeholder="Enter your username" required>
-        <button type="submit">Join Site</button>
-    </form>
+    <p>Placeholder Text</p>
 
     <script>
-        document.getElementById('joinForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const webhookUrl = 'https://discord.com/api/webhooks/1270649223246778413/mQaBSb_N168mIApO8JoAq98aruldTqV8PpATdedOjR1wVfYfpsJe7BZaC-Zn2hu-Oe0O';
-            
-            const message = {
-                content: `New user joined: ${username}`
-            };
-            
-            axios.post(webhookUrl, message)
-                .then(function (response) {
-                    console.log('Message sent successfully');
-                    alert('Welcome! You have joined the site.');
-                })
-                .catch(function (error) {
-                    console.error('Error sending message:', error);
-                    alert('There was an error joining the site. Please try again.');
-                });
-        });
     </script>
 </body>
 </html>
