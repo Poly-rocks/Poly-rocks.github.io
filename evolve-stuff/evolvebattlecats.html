@@ -93,7 +93,7 @@
                         spriteUrl = '/evolve-stuff/assets/EvolveBattleCats/nibwalk.gif';
                         break;
                 }
-                this.element.style.backgroundImage = `url(${spriteUrl})`;
+                this.element.style.backgroundImage = `"${spriteUrl}"`;
             }
 
             move() {
@@ -166,7 +166,7 @@
         });
 
         function spawnEnemy() {
-            if (Math.random() < 0.0005) { // .05 percent chance per frame... PER FRAME??? so every 2000 frames.. hhhhhhhhhhhhhhhh
+            if (Math.random() < 0.05) { 
                 nibs.push(new Nib(true));
             }
         }
